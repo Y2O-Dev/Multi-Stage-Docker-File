@@ -8,7 +8,7 @@ RUN apt-get update -y \
        osmium-tool \
     && rm -rf /var/lib/apt/lists/*
 
-# Create directories and download/merge OSM files
+# Create directories & download/merge OSM files
 RUN mkdir /osmfiles /merged \
     && curl -o /osmfiles/monaco.osm.pbf http://download.geofabrik.de/europe/monaco-latest.osm.pbf \
     && curl -o /osmfiles/andorra.osm.pbf http://download.geofabrik.de/europe/andorra-latest.osm.pbf \
